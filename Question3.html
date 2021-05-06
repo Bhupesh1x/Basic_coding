@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+function sayHello() {
+ let result = [];
+    
+    //Itearte each element
+    nums.forEach((val, ind, arr) => {
+        
+        //Use the value as index
+        let temp = Math.abs(arr[ind]) - 1;
+        
+        //If the number is already negative
+        //That means it has appeared once and this is its second time.
+        //So add it in the result
+        if(arr[temp] < 0){
+            result.push(temp+1);
+        }
+        
+        //Multiply the element at the given index with negative number
+        arr[temp]*= -1;
+    });
+    
+    return result;
+};
+
+document.write(findDuplicates([4,3,2,7,8,2,3,1]));
+
+sayHello();
+</script>
+</head>
+<body>
+</body>
+</html>
